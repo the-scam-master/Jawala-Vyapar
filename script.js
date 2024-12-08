@@ -27,73 +27,80 @@ document.addEventListener('DOMContentLoaded', () => {
     // Render category grid
     function renderCategoryGrid(categories) {
         categoryGrid.innerHTML = '';
+        
+        // Create "All Categories" item first
+        const allCategoriesItem = createAllCategoriesItem();
+        categoryGrid.appendChild(allCategoriesItem);
+
+        // Then add other categories
         categories.forEach(category => {
-            const categoryItem = document.createElement('div');
-            categoryItem.classList.add('category-item');
-            categoryItem.innerHTML = `
-                <i class="${category.icon}"></i>
-                <span>${category.name}</span>
-            `;
-            
-            categoryItem.addEventListener('click', () => {
-                // Remove selected class from all items
-                document.querySelectorAll('.category-item').forEach(item => 
-                    item.classList.remove('selected')
-                );
-                
-                // Add selected class to clicked item
-                categoryItem.classList.add('selected');
-                
-                // Update selected category
-                selectedCategory = category.id;
-                
-                // Update category name display
-                selectedCategoryName.textContent = category.name;
-                selectedCategoryName.style.opacity = '1';
-                
-                // Filter and render businesses
-                filterBusinesses();
-            });
-            
+            const categoryItem = createCategoryItem(category);
             categoryGrid.appendChild(categoryItem);
         });
+    }
 
-        // Add "All Categories" option
+    // Create category item
+    function createCategoryItem(category) {
+        const categoryItem = document.createElement('div');
+        categoryItem.classList.add('category-item');
+        categoryItem.innerHTML = `
+            <i class="${category.icon}"></i>
+            <span>${category.name}</span>
+        `;
+
+        categoryItem.addEventListener('click', () => {
+            selectCategory(categoryItem, category);
+        });
+
+        return categoryItem;
+    }
+
+    // Create "All Categories" item
+    function createAllCategoriesItem() {
         const allCategoriesItem = document.createElement('div');
         allCategoriesItem.classList.add('category-item');
         allCategoriesItem.innerHTML = `
             <i class="fas fa-th-large"></i>
             <span>सर्व श्रेण्या</span>
         `;
-        
+
         allCategoriesItem.addEventListener('click', () => {
-            // Remove selected class from all items
-            document.querySelectorAll('.category-item').forEach(item => 
-                item.classList.remove('selected')
-            );
-            
-            // Add selected class to all categories item
-            allCategoriesItem.classList.add('selected');
-            
-            // Clear selected category
-            selectedCategory = null;
-            
-            // Clear category name display
-            selectedCategoryName.textContent = '';
-            selectedCategoryName.style.opacity = '0';
-            
-            // Filter and render businesses
-            filterBusinesses();
+            selectAllCategories(allCategoriesItem);
         });
+
+        return allCategoriesItem;
+    }
+
+    // Select category
+    function selectCategory(categoryItem, category) {
+        document.querySelectorAll('.category-item').forEach(item =>
+            item.classList.remove('selected')
+        );
+        categoryItem.classList.add('selected');
+        selectedCategory = category.id;
         
-        categoryGrid.appendChild(allCategoriesItem);
+        // Remove the extra category name display
+        selectedCategoryName.textContent = '';
+        selectedCategoryName.style.opacity = '0';
+        
+        filterBusinesses();
+    }
+
+    // Select all categories
+    function selectAllCategories(allCategoriesItem) {
+        document.querySelectorAll('.category-item').forEach(item =>
+            item.classList.remove('selected')
+        );
+        allCategoriesItem.classList.add('selected');
+        selectedCategory = null;
+        selectedCategoryName.textContent = '';
+        selectedCategoryName.style.opacity = '0';
+        filterBusinesses();
     }
 
     // Filter and render businesses
     function filterBusinesses() {
         const searchTerm = searchInput.value.trim();
-        
-        // Filter businesses
         const filteredBusinesses = businessData.businesses.filter(business => {
             const matchesCategory = !selectedCategory || business.category === selectedCategory;
             const matchesSearch = !searchTerm ||
@@ -102,49 +109,54 @@ document.addEventListener('DOMContentLoaded', () => {
                 );
             return matchesCategory && matchesSearch;
         });
-
-        // Render filtered businesses
         renderBusinesses(filteredBusinesses);
     }
 
     // Render businesses
     function renderBusinesses(businesses) {
-        businessList.innerHTML = ''; // Clear previous content
+        businessList.innerHTML = '';
 
         if (businesses.length === 0) {
             businessList.innerHTML = '<div class="no-results"><p>कोणतेही व्यवसाय सापडले नाहीत.</p></div>';
             return;
         }
 
-        // Group businesses by category
         const groupedBusinesses = businesses.reduce((acc, business) => {
             if (!acc[business.category]) acc[business.category] = [];
             acc[business.category].push(business);
             return acc;
         }, {});
 
-        // Render businesses grouped by category
         for (const categoryId in groupedBusinesses) {
             const category = businessData.categories.find(cat => cat.id === categoryId);
-            
-            // Category header
-            const categoryHeader = document.createElement('div');
-            categoryHeader.classList.add('category-header');
-            categoryHeader.innerHTML = `<i class="${category.icon}"></i> ${category.name}`;
+            const categoryHeader = createCategoryHeader(category);
             businessList.appendChild(categoryHeader);
 
-            // Business cards for this category
             groupedBusinesses[categoryId].forEach(business => {
-                const businessCard = document.createElement('div');
-                businessCard.classList.add('business-card');
-                businessCard.innerHTML = `
-                    <h4>${business.shopName}</h4>
-                    <p><strong>मालक:</strong> ${business.ownerName}</p>
-                    <p><strong>संपर्क:</strong> <a href="tel:${business.contactNumber}">${formatPhoneNumber(business.contactNumber)}</a></p>
-                `;
+                const businessCard = createBusinessCard(business);
                 businessList.appendChild(businessCard);
             });
         }
+    }
+
+    // Create category header
+    function createCategoryHeader(category) {
+        const categoryHeader = document.createElement('div');
+        categoryHeader.classList.add('category-header');
+        categoryHeader.innerHTML = `<i class="${category.icon}"></i> ${category.name}`;
+        return categoryHeader;
+    }
+
+    // Create business card
+    function createBusinessCard(business) {
+        const businessCard = document.createElement('div');
+        businessCard.classList.add('business-card');
+        businessCard.innerHTML = `
+            <h4>${business.shopName}</h4>
+            <p><strong>मालक:</strong> ${business.ownerName}</p>
+            <p><strong>संपर्क:</strong> <a href="tel:${business.contactNumber}">${formatPhoneNumber(business.contactNumber)}</a></p>
+        `;
+        return businessCard;
     }
 
     // Format phone number for better readability
