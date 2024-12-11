@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #A0522D;        /* Sienna */
-    --secondary-color: #CD853F;      /* Peru */
-    --accent-color: #DEB887;         /* Burlywood */
-    --background-color: #FFF5E6;     /* Cornsilk */
-    --text-color: #4A3933;           /* Dark Brown */
+    --primary-color: #4A6741;        /* Deep Sage Green */
+    --secondary-color: #6B8E23;      /* Olive Drab */
+    --accent-color: #9ACD32;         /* Yellow Green */
+    --background-color: #F0FFF0;     /* Honeydew */
+    --text-color: #2C3E50;           /* Dark Blue Gray */
     --card-background: #FFFFFF;      /* Pure White */
     --soft-shadow: rgba(0,0,0,0.1);
 }
