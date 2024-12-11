@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #2C3E50;        /* Dark Blue Gray */
-    --secondary-color: #34495E;      /* Darker Blue Gray */
-    --accent-color: #3498DB;         /* Bright Blue */
-    --background-color: #ECF0F1;     /* Light Gray-Blue */
-    --text-color: #2C3E50;           /* Dark Text */
+    --primary-color: #D35400;        /* Burnt Orange */
+    --secondary-color: #E67E22;      /* Carrot Orange */
+    --accent-color: #F39C12;         /* Sunflower */
+    --background-color: #FFF3E0;     /* Soft Peach */
+    --text-color: #333333;           /* Dark Charcoal */
     --card-background: #FFFFFF;      /* Pure White */
     --soft-shadow: rgba(0,0,0,0.1);
 }
+
 * {
     margin: 0;
     padding: 0;
