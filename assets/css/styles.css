@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #2C5F2D;        /* Deep Forest Green */
-    --secondary-color: #97BC62;      /* Sage Green */
-    --accent-color: #77A146;         /* Olive Green */
-    --background-color: #F5F5F5;     /* Light Gray */
+    --primary-color: #6A5ACD;        /* Slate Blue */
+    --secondary-color: #9370DB;      /* Medium Purple */
+    --accent-color: #BA55D3;         /* Medium Orchid */
+    --background-color: #F5F0FF;     /* Soft Lavender */
     --text-color: #333333;           /* Dark Charcoal */
     --card-background: #FFFFFF;      /* Pure White */
     --soft-shadow: rgba(0,0,0,0.1);
