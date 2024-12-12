@@ -41,11 +41,9 @@
         { "id": "jewelry_shops", "name": "ज्वेलरी शॉप", "icon": "fa-solid fa-gem" },
         { "id": "puja_items", "name": "पूजा साहित्य", "icon": "fa-solid fa-praying-hands" },
         { "id": "internet_cafe", "name": "इंटरनेट/सायबर कॅफे", "icon": "fa-solid fa-desktop" },
-        { "id": "mobile_recharge", "name": "मोबाईल रिचार्ज", "icon": "fa-solid fa-mobile-screen" },
         { "id": "post_office", "name": "पोस्ट ऑफिस", "icon": "fa-solid fa-envelope" },
         { "id": "shoe_repair", "name": "बूट मरम्मत", "icon": "fa-solid fa-shoe-prints" },
-        { "id": "electrical_repair", "name": "इलेक्ट्रिकल दुरुस्ती", "icon": "fa-solid fa-bolt" },
-        { "id": "banking", "name": "बँकिंग सेवा", "icon": "fa-solid fa-building-columns" },
+        { "id": "electric_board_services", "name": "विद्युत मंडळ सेवा", "icon": "fa-solid fa-bolt" },
         { "id": "welding_shop", "name": "वेल्डिंग दुकान", "icon": "fa-solid fa-fire" }
     ],
     "businesses": [
