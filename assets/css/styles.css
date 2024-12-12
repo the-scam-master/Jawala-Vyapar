@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #990F02;        /* Deep Crimson */
-    --secondary-color: #800000;      /* Burgundy */
+    --primary-color: #D35400;        /* Pumpkin */
+    --secondary-color: #8E44AD;      /* Rich Plum */
     --accent-color: #FF4500;         /* Orange Red */
-    --background-color: #FFFFFF;     /* Pure White */
-    --text-color: #2C3E50;           /* Dark Blue Gray */
-    --card-background: #FFFFFF;      /* Pure White */
+    --background-color: #FAF0E6;     /* Warm Ivory */
+    --text-color: #2F4F4F;           /* Dark Slate Gray */
+    --card-background: #FFFFFF;      /* Crisp White */
     --soft-shadow: rgba(0,0,0,0.1);
 }
 
