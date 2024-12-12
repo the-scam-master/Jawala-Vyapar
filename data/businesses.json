@@ -33,14 +33,20 @@
         { "id": "rural_construction", "name": "ग्रामीण बांधकाम सेवा", "icon": "fa-solid fa-house" },
         { "id": "blacksmith_services", "name": "लोहारकाम", "icon": "fa-solid fa-gavel" },
         { "id": "makeup_artists", "name": "मेकअप आर्टिस्ट", "icon": "fa-solid fa-brush" },
-        { "id": "hardware", "name": "हार्डवेयर दुकान", "icon": "fa-solid fa-screwdriver-wrench" },
         { "id": "photography", "name": "फोटोग्राफी", "icon": "fa-solid fa-camera" },
         { "id": "newspaper_services", "name": "वृत्तपत्र सेवा", "icon": "fa-solid fa-newspaper" },
         { "id": "opticals", "name": "ऑप्टिकल्स", "icon": "fa-solid fa-glasses" },
         { "id": "paint_decor", "name": "पेंट व डेकोर", "icon": "fa-solid fa-paint-roller" },
         { "id": "jewelry_shops", "name": "ज्वेलरी शॉप", "icon": "fa-solid fa-gem" },
-        { "id": "puja_items", "name": "पूजा साहित्य", "icon": "fa-solid fa-praying-hands" }
-                  ],
+        { "id": "puja_items", "name": "पूजा साहित्य", "icon": "fa-solid fa-praying-hands" },
+        { "id": "internet_cafe", "name": "इंटरनेट/साइबर कैफे", "icon": "fa-solid fa-wifi" },
+        { "id": "mobile_recharge", "name": "मोबाइल रिचार्ज", "icon": "fa-solid fa-mobile-screen" },
+        { "id": "post_office", "name": "पोस्ट ऑफिस", "icon": "fa-solid fa-envelope" },
+        { "id": "shoe_repair", "name": "बूट मरम्मत", "icon": "fa-solid fa-shoe-prints" },
+        { "id": "electrical_repair", "name": "इलेक्ट्रिकल मरम्मत", "icon": "fa-solid fa-bolt" },
+        { "id": "banking", "name": "बँकिंग सेवा", "icon": "fa-solid fa-bank" },
+        { "id": "welding_shop", "name": "वेल्डिंग दुकान", "icon": "fa-solid fa-fire" }
+      ],
     "businesses": [
         { "id": "1", "category": "vermicelli_processing", "shopName": "उन्नती गृह उद्योग", "ownerName": "माधुरी संजय काळबांडे", "contactNumber": "8275838227" },
         { "id": "2", "category": "puja_items", "shopName": "गोविंद अगरबत्ती, परफ्युम्स फ्रेमिंग", "ownerName": "जयकुमार वानखेडे", "contactNumber": "7775875877" },
