@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Disable right-click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable keyboard shortcuts for copying
+    document.addEventListener('keydown', event => {
+        if ((event.ctrlKey || event.metaKey) && (event.key === 'c' || event.key === 'C')) {
+            event.preventDefault();
+        }
+        if ((event.ctrlKey || event.metaKey) && (event.key === 'x' || event.key === 'X')) {
+            event.preventDefault();
+        }
+        if ((event.ctrlKey || event.metaKey) && (event.key === 'v' || event.key === 'V')) {
+            event.preventDefault();
+        }
+        if ((event.ctrlKey || event.metaKey) && (event.key === 'a' || event.key === 'A')) {
+            event.preventDefault();
+        }
+        if ((event.ctrlKey || event.metaKey) && (event.key === 's' || event.key === 'S')) {
+            event.preventDefault();
+        }
+    });
+
     const businessList = document.getElementById('businessList');
     const searchInput = document.getElementById('searchInput');
     const categoryGrid = document.getElementById('categoryGrid');
