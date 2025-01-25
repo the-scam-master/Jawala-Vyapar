@@ -1,6 +1,6 @@
-# **Phone Directory for Jawala Village**
+# **Phone Directory for [Village Name]**
 
-This project is a comprehensive online phone directory for the businesses and services of Jawala village, Yavatmal district, Maharashtra. The website is designed to make it easy for residents and visitors to access contact details and categories of local businesses, with an emphasis on Marathi language support and mobile-first design.
+This project is a comprehensive online phone directory for the businesses and services of [Village Name], [District Name], [State Name]. The website is designed to make it easy for residents and visitors to access contact details and categories of local businesses, with an emphasis on [Language] language support and mobile-first design.
 
 ---
 
@@ -9,8 +9,8 @@ This project is a comprehensive online phone directory for the businesses and se
 - **Category Filtering**: Easily filter businesses by categories such as medical services, grocery stores, restaurants, etc.
 - **Search Functionality**: Quickly find specific businesses or services with a robust search bar.
 - **Responsive Design**: Optimized for mobile users for seamless accessibility.
-- **Multi-Language Support**: Focused on Marathi language to cater to local users.
-- **Fast and Reliable Hosting**: Deployed on [Vercel](https://vercel.com) for high performance.
+- **Multi-Language Support**: Focused on [Language] language to cater to local users.
+- **Fast and Reliable Hosting**: Deployed on [Hosting Service] for high performance.
 
 ---
 
@@ -19,7 +19,7 @@ This project is a comprehensive online phone directory for the businesses and se
 - **Frontend**: HTML, CSS, JavaScript
 - **Data Management**: JSON
 - **Icons**: Font Awesome for category representation
-- **Deployment**: Vercel
+- **Deployment**: [Hosting Service]
 - **Version Control**: GitHub private repository
 
 ---
@@ -35,7 +35,7 @@ root/
 │   ├── js/
 │   │   └── app.js
 │   ├── images/
-│       └── favicon.ico   
+│       └── favicon.ico
 │
 ├── data/
 │   └── businesses.json
@@ -61,5 +61,3 @@ root/
 - Implementing **real-time data updates** via an admin panel.
 
 ---
-
-Let me know if you’d like to customize this further!
