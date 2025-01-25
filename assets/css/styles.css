@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700&family=Mukta:wght@400;600;700&display=swap');
 
 :root {
-    --primary-color: #CD853F;        /* Peru */
-    --secondary-color: #D2691E;      /* Chocolate */
-    --accent-color: #FF6347;         /* Tomato */
-    --background-color: #FFF8DC;     /* Cornsilk */
-    --text-color: #2F4F4F;           /* Dark Slate Gray */
-    --card-background: #FFFFFF;      /* Crisp White */
+    --primary-color: #2C5F2D;        /* Deep Forest Green */
+    --secondary-color: #97BC62;      /* Sage Green */
+    --accent-color: #77A146;         /* Olive Green */
+    --background-color: #F5F5F5;     /* Light Gray */
+    --text-color: #333333;           /* Dark Charcoal */
+    --card-background: #FFFFFF;      /* Pure White */
     --soft-shadow: rgba(0,0,0,0.1);
 }
 
@@ -23,6 +23,10 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    user-select: none;          /* Standard property */
+    -webkit-user-select: none;  /* For Safari/Chrome */
+    -moz-user-select: none;     /* For Firefox */
+    -ms-user-select: none;      /* For Internet Explorer */
 }
 
 .container {
@@ -384,6 +388,7 @@ footer .copyright {
         font-size: 0.9rem;
     }
 }
+
 
 .whatsapp-contact {
     display: inline-flex;
