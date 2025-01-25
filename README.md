@@ -22,4 +22,4 @@ This journey taught me that innovation starts with listening. Have you ever solv
 
 #TechForGood #CommunityImpact #RuralInnovation #OpenSource #ProblemSolving  
 
-![[Screen Shot 2025-01-26 at 00.09.59.png]]
+![Screenshot](Screen%20Shot%202025-01-26%20at%2000.09.59.png)
